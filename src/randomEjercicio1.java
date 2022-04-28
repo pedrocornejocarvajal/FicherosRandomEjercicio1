@@ -42,7 +42,7 @@ public class randomEjercicio1 {
             comprobarPosicion();
             leerDato();
 
-            //cambiamos la posicion al principio comprobamos la posición y leemos
+            //cambiamos la posición al principio comprobamos la posición y leemos
             cambiarPosicion(0);
             comprobarPosicion();
             leerDato();
