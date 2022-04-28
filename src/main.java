@@ -11,8 +11,6 @@
 
 public class main {
     public static void main(String[] args) {
-
-
         randomEjercicio1.run();
     }
 }

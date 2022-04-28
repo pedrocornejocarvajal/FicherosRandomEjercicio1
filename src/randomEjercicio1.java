@@ -54,31 +54,52 @@ public class randomEjercicio1 {
 
             //ponemos a prueba de balas los errores que puedan ocasionar los ficheros
         } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("no se encuentra el fichero");
+            System.out.println("Error, no se ha encontrado el fichero seleccionado");
         } catch (IOException ioException) {
-            System.out.println("error general de entrada salida");
+            System.out.println("Error en la entrada o salida del fichero");
         } catch (Exception Exception) {
-            System.out.println("otros errores");
+            System.out.println("Error 404");
         } finally {
             cerrarFlujo(); //cerramos el flujo del fichero
         }
     }
 
+    /**
+     * Método para leer un dato de tipo int en el fichero
+     * @throws IOException
+     */
     private static void leerDato() throws IOException {
         System.out.println("El resultado es: " + randomAccessFile.read() + "\n");
     }
 
+    /**
+     * Método para leer un tipo de tipo long en el fichero
+     * @throws IOException
+     */
     private static void leerDatoLong() throws IOException {
         System.out.println("El resultado es: " + randomAccessFile.readLong() + "\n");
     }
 
+    /**
+     * Método para comprobar la posicion en el fichero
+     * @throws IOException
+     */
     private static void comprobarPosicion() throws IOException {
         System.out.println("Estamos en la posición " + randomAccessFile.getFilePointer());
     }
+
+    /**
+     * Método para cambiar la posición en el fichero
+     * @param posicion
+     * @throws IOException
+     */
     private static void cambiarPosicion(int posicion) throws IOException {
         randomAccessFile.seek(posicion);
     }
 
+    /**
+     * Método para cerrar los flujos del fichero
+     */
     private static void cerrarFlujo(){
         try {
             if (randomAccessFile != null) {
